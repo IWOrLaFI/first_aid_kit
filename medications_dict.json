@@ -1,0 +1,42 @@
+{
+    "nemid": {
+        "name": "nemid",
+        "expiration_date": "15.12.2023",
+        "number_of_drugs": 120
+    },
+    "volin": {
+        "name": "volin",
+        "expiration_date": "15.02.2022",
+        "number_of_drugs": 150
+    },
+    "nemesil": {
+        "name": "nemesil",
+        "expiration_date": "15.11.2022",
+        "number_of_drugs": 150
+    },
+    "peneciline": {
+        "name": "peneciline",
+        "expiration_date": "15.12.2022",
+        "number_of_drugs": 450
+    },
+    "citromon": {
+        "name": "citromon",
+        "expiration_date": "15.04.2023",
+        "number_of_medications": 20
+    },
+    "pintalgin": {
+        "name": "pintalgin",
+        "expiration_date": "15.05.2022",
+        "number_of_medications": 150
+    },
+    "qwert": {
+        "name": "qwert",
+        "expiration_date": "15.05.2022",
+        "number_of_medications": 150
+    },
+    "qwerty": {
+        "name": "qwerty",
+        "expiration_date": "15.05.2022",
+        "number_of_medications": 150
+    }
+}
