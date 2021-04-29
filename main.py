@@ -21,14 +21,13 @@ class Medications:
                 }
             }
         medications_dict.update(x)
-        return print_to_json()
+        return print_to_json(self.name, 'added')
 
 
 def del_medications():
     m_del = input('Enter name medication for delete\n>>>')
     del medications_dict[m_del]
-    print(f'{m_del} removed')
-    return print_to_json()
+    return print_to_json(m_del, 'removed')
 
 
 def input_ex_date():
@@ -41,7 +40,6 @@ def input_ex_date():
 
 def input_medication():
     name = input('Enter name\n>>>')
-    # date = input('Enter expiration date (dd.mm.yyyy)\n>>>')
     date = input_ex_date()
     number = int(input('Enter number of drugs\n>>>'))
     m1 = Medications(name, date, number)
@@ -53,10 +51,10 @@ def find_medication():
     return print(medications_dict[name])
 
 
-def print_to_json():
+def print_to_json(name, operation):
     with open("medications_dict.json", "w") as write_file:
         json.dump(medications_dict, write_file, indent=4)
-    return print('medications_dict.json - safe')
+    return print(f'{name} {operation} \n medications_dict.json - safe')
 
 
 def create_user_list():
