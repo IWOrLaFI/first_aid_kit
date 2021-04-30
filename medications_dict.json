@@ -31,12 +31,12 @@
     },
     "\u0410\u0441\u043a\u043e\u0440\u0443\u0442\u0438\u043d": {
         "name": "\u0410\u0441\u043a\u043e\u0440\u0443\u0442\u0438\u043d",
-        "expiration_date": "01.01.2025",
+        "expiration_date": "01.01.2021",
         "number_of_medications": 50
     },
     "\u0430\u0441\u043f\u0438\u0440\u0438\u043d": {
         "name": "\u0430\u0441\u043f\u0438\u0440\u0438\u043d",
-        "expiration_date": "03.02.2022",
+        "expiration_date": "03.02.2020",
         "number_of_medications": 50
     }
 }
