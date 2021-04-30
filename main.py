@@ -29,11 +29,15 @@ def del_medications():
 
 
 def input_ex_date():
-    date_entry = input('Enter expiration date (i.e. 2021.3.2)\n>>>')
-    year, month, day = map(int, date_entry.split('.'))
-    date_dt = datetime(year, month, day)
-    date = date_dt.strftime("%m.%d.%Y")
-    return date
+    try:
+        date_entry = input('Enter expiration date (i.e. 2021.3.2)\n>>>')
+        year, month, day = map(int, date_entry.split('.'))
+        date_dt = datetime(year, month, day)
+        date = date_dt.strftime("%m.%d.%Y")
+        return date
+    except ValueError:
+        print('date entered incorrectly')
+        return input_ex_date()
 
 
 def input_medication():
