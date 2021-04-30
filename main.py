@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
 
+
 medications_dict = json.load(open('medications_dict.json'))
 
 
