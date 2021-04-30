@@ -1,7 +1,5 @@
 import json
 from datetime import datetime
-import sys
-
 
 medications_dict = json.load(open('medications_dict.json'))
 
@@ -68,7 +66,6 @@ def create_user_list():
 def list_ex():
     user_list = []
     for i in medications_dict:
-        temp_list = list(medications_dict[i]['expiration_date'])
         i_exp = medications_dict[i]['expiration_date']
         year, month, day = map(int, i_exp.split('.'))
         i_exp_dt = datetime(day, month, year)
@@ -79,9 +76,9 @@ def list_ex():
 
 
 def menu():
-    print("Welcome to the first aid kit.")
+    print("Welcome to the first aid kit.\n")
     list_ex()
-    print("""Enter the command:
+    print("""\nEnter the command:
     * list - to view a list of medications.
     * find - find a medication by name
     * add  - add medication
