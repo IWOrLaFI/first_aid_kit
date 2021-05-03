@@ -24,9 +24,13 @@ class Medications:
 
 
 def del_medications():
-    m_del = input('Enter name medication for delete\n>>>')
-    del medications_dict[m_del]
-    return print_to_json(m_del, 'removed')
+    try:
+        m_del = input('Enter name medication for delete\n>>>')
+        del medications_dict[m_del]
+        return print_to_json(m_del, 'removed')
+    except KeyError:
+        print('Not find medication\n Choice medication in list\n')
+        create_user_list()
 
 
 def input_ex_date():
@@ -50,8 +54,12 @@ def input_medication():
 
 
 def find_medication():
-    name = input('Enter name medication\n>>>')
-    return print(medications_dict[name])
+    try:
+        name = input('Enter name medication\n>>>')
+        return print(medications_dict[name])
+    except KeyError:
+        print('Not find medication\n Choice medication in list\n')
+        create_user_list()
 
 
 def print_to_json(name, operation):

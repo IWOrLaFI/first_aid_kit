@@ -38,10 +38,5 @@
         "name": "\u0430\u0441\u043f\u0438\u0440\u0438\u043d",
         "expiration_date": "03.02.2020",
         "number_of_medications": 50
-    },
-    "qwerty": {
-        "name": "qwerty",
-        "expiration_date": "05.05.2525",
-        "number_of_medications": 50
     }
 }
