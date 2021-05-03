@@ -97,7 +97,8 @@ def menu():
     * add  - add medication
     * del  - removal of medications
     * edit - change medications 
-    * exit - for exit """)
+    * exit - for exit 
+    *help - for help)""")
 
     while True:
         command = input('\nEnter the command:\n>>> ')
@@ -113,6 +114,15 @@ def menu():
             input_medication().add_medications()
         elif command == 'exit':
             break
+        elif command == 'help':
+            print("""\nEnter the command:
+                * list - to view a list of medications.
+                * find - find a medication by name
+                * add  - add medication
+                * del  - removal of medications
+                * edit - change medications 
+                * exit - for exit 
+                * help - for help)""")
         else:
             print("Unknown  command")
 

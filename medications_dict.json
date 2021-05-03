@@ -1,8 +1,8 @@
 {
     "nemid": {
         "name": "nemid",
-        "expiration_date": "15.12.2023",
-        "number_of_drugs": 120
+        "expiration_date": "05.05.2020",
+        "number_of_medications": 150
     },
     "nemesil": {
         "name": "nemesil",
