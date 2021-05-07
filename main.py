@@ -16,8 +16,8 @@ class Medications:
                 'name': self.name,
                 'expiration_date': self.expiration_date,
                 'number_of_medications': self.number_of_medications
-                }
             }
+        }
         medications_dict.update(x)
         return print_to_json(self.name, 'added')
 
@@ -88,6 +88,7 @@ def list_ex():
 
 
 def menu():
+
     print("Welcome to the first aid kit.\n")
     list_ex()
     print("""\nEnter the command:
