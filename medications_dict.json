@@ -1,0 +1,47 @@
+{
+    "nemid": {
+        "name": "nemid",
+        "expiration_date": "05.05.2020",
+        "number_of_medications": 150
+    },
+    "nemesil": {
+        "name": "nemesil",
+        "expiration_date": "15.11.2022",
+        "number_of_drugs": 150
+    },
+    "peneciline": {
+        "name": "peneciline",
+        "expiration_date": "15.12.2022",
+        "number_of_drugs": 450
+    },
+    "citromon": {
+        "name": "citromon",
+        "expiration_date": "15.04.2023",
+        "number_of_medications": 20
+    },
+    "pintalgin": {
+        "name": "pintalgin",
+        "expiration_date": "15.05.2022",
+        "number_of_medications": 150
+    },
+    "aspirine": {
+        "name": "aspirine",
+        "expiration_date": "03.05.2022",
+        "number_of_medications": 1200
+    },
+    "\u0410\u0441\u043a\u043e\u0440\u0443\u0442\u0438\u043d": {
+        "name": "\u0410\u0441\u043a\u043e\u0440\u0443\u0442\u0438\u043d",
+        "expiration_date": "01.01.2021",
+        "number_of_medications": 50
+    },
+    "\u0430\u0441\u043f\u0438\u0440\u0438\u043d": {
+        "name": "\u0430\u0441\u043f\u0438\u0440\u0438\u043d",
+        "expiration_date": "03.02.2020",
+        "number_of_medications": 50
+    },
+    "qwerty": {
+        "name": "qwerty",
+        "expiration_date": "03.02.2022",
+        "number_of_medications": 150
+    }
+}
