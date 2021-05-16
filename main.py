@@ -75,22 +75,23 @@ def create_user_list():
     return print(sorted(user_list))
 
 
-def list_ex():
-    user_list = []
+def list_exp():
+    user_list_exp = []
     for i in medications_dict:
         i_exp = medications_dict[i]['expiration_date']
         year, month, day = map(int, i_exp.split('.'))
         i_exp_dt = datetime(day, month, year)
         if (i_exp_dt - datetime.now()).days <= 7:
-            user_list.append([i, i_exp])
-    print('The following drugs have expired:\n', user_list)
-    return user_list
+            user_list_exp.append([i, i_exp])
+    if len(user_list_exp) > 0:
+        print('The following drugs have expired:\n', user_list_exp)
+    return user_list_exp
 
 
 def menu():
 
     print("Welcome to the first aid kit.\n")
-    list_ex()
+    list_exp()
     print("""\nEnter the command:
     * list - to view a list of medications.
     * find - find a medication by name
@@ -98,7 +99,7 @@ def menu():
     * del  - removal of medications
     * edit - change medications 
     * exit - for exit 
-    *help - for help)""")
+    * help - for help""")
 
     while True:
         command = input('\nEnter the command:\n>>> ')
