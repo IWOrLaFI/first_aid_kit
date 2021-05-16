@@ -83,28 +83,36 @@ def list_exp():
         i_exp_dt = datetime(day, month, year)
         if (i_exp_dt - datetime.now()).days <= 7:
             user_list_exp.append([i, i_exp])
-    if len(user_list_exp) > 0:
-        print('The following drugs have expired:\n', user_list_exp)
     return user_list_exp
+
+
+def msg_exp():
+    if len(list_exp()) > 0:
+        return print('The following drugs have expired:\n', list_exp())
+    else:
+        return print('No expired drugs')
 
 
 def menu():
 
     print("Welcome to the first aid kit.\n")
-    list_exp()
+    msg_exp()
     print("""\nEnter the command:
     * list - to view a list of medications.
-    * find - find a medication by name
-    * add  - add medication
-    * del  - removal of medications
-    * edit - change medications 
-    * exit - for exit 
-    * help - for help""")
+    * exp - to view a list of following drugs have expired.
+    * find - find a medication by name.
+    * add  - add medication.
+    * del  - removal of medications.
+    * edit - change medications .
+    * exit - for exit .
+    * help - for help.""")
 
     while True:
         command = input('\nEnter the command:\n>>> ')
         if command == 'list':
             create_user_list()
+        elif command == 'exp':
+            msg_exp()
         elif command == 'find':
             find_medication()
         elif command == 'add':
