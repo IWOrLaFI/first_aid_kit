@@ -93,19 +93,23 @@ def msg_exp():
         return print('No expired drugs')
 
 
-def menu():
+def msg_command_list():
+    return print("""\nEnter the command:
+        * list - to view a list of medications.
+        * exp - to view a list of following drugs have expired.
+        * find - find a medication by name.
+        * add  - add medication.
+        * del  - removal of medications.
+        * edit - change medications.
+        * help - for help.
+        * exit - for exit.
+        """)
 
+
+def menu():
     print("Welcome to the first aid kit.\n")
     msg_exp()
-    print("""\nEnter the command:
-    * list - to view a list of medications.
-    * exp - to view a list of following drugs have expired.
-    * find - find a medication by name.
-    * add  - add medication.
-    * del  - removal of medications.
-    * edit - change medications .
-    * exit - for exit .
-    * help - for help.""")
+    msg_command_list()
 
     while True:
         command = input('\nEnter the command:\n>>> ')
@@ -121,17 +125,10 @@ def menu():
             del_medications()
         elif command == 'edit':
             input_medication().add_medications()
+        elif command == 'help':
+            msg_command_list()
         elif command == 'exit':
             break
-        elif command == 'help':
-            print("""\nEnter the command:
-                * list - to view a list of medications.
-                * find - find a medication by name
-                * add  - add medication
-                * del  - removal of medications
-                * edit - change medications 
-                * exit - for exit 
-                * help - for help)""")
         else:
             print("Unknown  command")
 
