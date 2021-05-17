@@ -72,9 +72,9 @@ def find_medication():
 
 
 def print_to_json(name, operation):
-    with open("medications_dict.json", "w") as write_file:
+    with open(FILE_NAME_JSON, "w") as write_file:
         json.dump(medications_dict, write_file, indent=4)
-    return print(f'{name} {operation} \n medications_dict.json - safe')
+    return print(f'{name} {operation} \n {FILE_NAME_JSON} - safe')
 
 
 def create_user_list():
