@@ -1,7 +1,17 @@
 import json
 from datetime import datetime
+FILE_NAME_JSON = 'medications_dict.json'
 
-medications_dict = json.load(open('medications_dict.json'))
+
+def load_json():
+    try:
+        med_dict = json.load(open(FILE_NAME_JSON))
+        return med_dict
+    except FileNotFoundError:
+        print('file not found')
+
+
+medications_dict = load_json()
 
 
 class Medications:
