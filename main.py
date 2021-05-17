@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-FILE_NAME_JSON = 'medications_dict.json'
+FILE_NAME_JSON = 'medications_dict3.json'
 
 
 def load_json():
@@ -9,6 +9,11 @@ def load_json():
         return med_dict
     except FileNotFoundError:
         print('file not found')
+        input_medication()
+        file_json = open(FILE_NAME_JSON, 'w')
+        file_json.close()
+        print('Create file', FILE_NAME_JSON)
+
 
 
 medications_dict = load_json()
@@ -72,7 +77,7 @@ def find_medication():
 
 
 def print_to_json(name, operation):
-    with open("medications_dict.json", "w") as write_file:
+    with open(FILE_NAME_JSON, "w") as write_file:
         json.dump(medications_dict, write_file, indent=4)
     return print(f'{name} {operation} \n medications_dict.json - safe')
 
@@ -87,13 +92,17 @@ def create_user_list():
 
 def list_exp():
     user_list_exp = []
-    for i in medications_dict:
-        i_exp = medications_dict[i]['expiration_date']
-        year, month, day = map(int, i_exp.split('.'))
-        i_exp_dt = datetime(day, month, year)
-        if (i_exp_dt - datetime.now()).days <= 7:
-            user_list_exp.append([i, i_exp])
-    return user_list_exp
+    try:
+        for i in medications_dict:
+            i_exp = medications_dict[i]['expiration_date']
+            year, month, day = map(int, i_exp.split('.'))
+            i_exp_dt = datetime(day, month, year)
+            if (i_exp_dt - datetime.now()).days <= 7:
+                user_list_exp.append([i, i_exp])
+        return user_list_exp
+    except TypeError:
+        print('List is empty')
+        return user_list_exp
 
 
 def msg_exp():
