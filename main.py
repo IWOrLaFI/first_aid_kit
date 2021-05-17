@@ -15,7 +15,6 @@ def load_json():
         print('Create file', FILE_NAME_JSON)
 
 
-
 medications_dict = load_json()
 
 
