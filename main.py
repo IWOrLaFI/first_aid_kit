@@ -4,6 +4,17 @@ FILE_NAME_JSON = 'medications_dict.json'
 
 
 def template_obj_dict():
+
+    """
+    This function contains a dictionary object template for creating a new JSON file.
+    If you change the dictionary template,
+    you will also need to change the template in
+    class Medications:
+        def __init__,
+        def add_medications.
+    :return: dictionary object
+    """
+
     x = {'aspirine': {
         'name': 'aspirine',
         'expiration_date': '15.12.2000',
