@@ -168,11 +168,11 @@ def command_user():
             print("Unknown  command")
 
 
-def menu():
+def start():
     print("Welcome to the first aid kit.\n")
     msg_exp()
     msg_command_list()
     command_user()
 
 
-menu()
+start()
