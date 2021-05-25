@@ -1,6 +1,7 @@
 # first_aid_kit
 First aid kit application.
 (in developing)
+
 Purpose:
 1. Formation of a list of medicines that are in the first-aid kit:
     - name
@@ -9,6 +10,7 @@ Purpose:
 2. Saving information to a file.
 3. Tracking and formation of a list of medications that have expired.
 4. Tracking and forming a list of medications that have expired.
+
 Work:
 1. Launching the application.
 2. Checking the expiration dates of the existing list of medicinal products.
