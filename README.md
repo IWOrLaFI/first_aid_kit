@@ -14,8 +14,8 @@ Purpose:
 Work:
 1. Launching the application.
 2. Checking the expiration dates of the existing list of medicinal products.
-    2.1. Formation of a list of medications that need to be replaced in the first-aid kit.
-    2.2. Displaying a list of medications to the user that need to be replaced in the first-aid kit.
+ 2.1. Formation of a list of medications that need to be replaced in the first-aid kit.
+ 2.2. Displaying a list of medications to the user that need to be replaced in the first-aid kit.
 3. Output to the user. the list of menu commands.
 4. Request for command input.
 
