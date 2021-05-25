@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-FILE_NAME_JSON = 'medications_dict.json'
+FILE_NAME_JSON = 'medications_dict1.json'
 
 
 def template_obj_dict():
@@ -32,7 +32,7 @@ def load_json():
         print('file not found')
         with open(FILE_NAME_JSON, "w") as write_file:
             json.dump(template_obj_dict(), write_file, indent=4)
-        print(f'create new file {FILE_NAME_JSON}')
+            print(f'create new file {FILE_NAME_JSON}')
         return load_json()
 
 
@@ -145,11 +145,7 @@ def msg_command_list():
         """)
 
 
-def menu():
-    print("Welcome to the first aid kit.\n")
-    msg_exp()
-    msg_command_list()
-
+def command_user():
     while True:
         command = input('\nEnter the command:\n>>> ')
         if command == 'list':
@@ -170,6 +166,13 @@ def menu():
             break
         else:
             print("Unknown  command")
+
+
+def menu():
+    print("Welcome to the first aid kit.\n")
+    msg_exp()
+    msg_command_list()
+    command_user()
 
 
 menu()
