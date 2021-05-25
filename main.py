@@ -1,27 +1,6 @@
 import json
 from datetime import datetime
-FILE_NAME_JSON = 'medications_dict1.json'
-
-
-def template_obj_dict():
-
-    """
-    This function contains a dictionary object template for creating a new JSON file.
-    If you change the dictionary template,
-    you will also need to change the template in
-    class Medications:
-        def __init__,
-        def add_medications.
-    :return: dictionary object
-    """
-
-    x = {'aspirine': {
-        'name': 'aspirine',
-        'expiration_date': '15.12.2000',
-        'number_of_medications': 0
-    },
-    }
-    return x
+FILE_NAME_JSON = 'medications_dict.json'
 
 
 def load_json():
@@ -31,7 +10,7 @@ def load_json():
     except FileNotFoundError:
         print('file not found')
         with open(FILE_NAME_JSON, "w") as write_file:
-            json.dump(template_obj_dict(), write_file, indent=4)
+            json.dump({}, write_file, indent=4)
             print(f'create new file {FILE_NAME_JSON}')
         return load_json()
 
