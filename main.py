@@ -3,10 +3,10 @@ from datetime import datetime
 FILE_NAME_JSON = 'medications_dict.json'
 
 
-def create_new_file_json():
-    with open(FILE_NAME_JSON, "w") as write_file:
+def create_new_file_json(file_name):
+    with open(file_name, "w") as write_file:
         json.dump({}, write_file, indent=4)
-    return print(f'create new file {FILE_NAME_JSON}')
+    return print(f'create new file {file_name}')
 
 
 def load_json():
@@ -15,7 +15,7 @@ def load_json():
         return med_dict
     except FileNotFoundError:
         print('file not found')
-        create_new_file_json()
+        create_new_file_json(FILE_NAME_JSON)
         return load_json()
 
 
