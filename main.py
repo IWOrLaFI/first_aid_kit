@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-FILE_NAME_JSON = 'medications_dict1.json'
+FILE_NAME_JSON = 'medications_dict.json'
 
 
 def create_new_file_json():
