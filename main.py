@@ -3,16 +3,26 @@ from datetime import datetime
 FILE_NAME_JSON = 'medications_dict.json'
 
 
+def template_obj_dict():
+    x = {'aspirine': {
+        'name': 'aspirine',
+        'expiration_date': '15.12.2000',
+        'number_of_medications': 0
+    },
+    }
+    return x
+
+
 def load_json():
     try:
         med_dict = json.load(open(FILE_NAME_JSON))
         return med_dict
     except FileNotFoundError:
         print('file not found')
-        input_medication()
-        file_json = open(FILE_NAME_JSON, 'w')
-        file_json.close()
-        print('Create file', FILE_NAME_JSON)
+        with open(FILE_NAME_JSON, "w") as write_file:
+            json.dump(template_obj_dict(), write_file, indent=4)
+        print(f'create new file {FILE_NAME_JSON}')
+        return load_json()
 
 
 medications_dict = load_json()
@@ -75,9 +85,9 @@ def find_medication():
         create_user_list()
 
 
-def print_to_json(name, operation):
+def print_to_json(name, operation, m_dict=medications_dict):
     with open(FILE_NAME_JSON, "w") as write_file:
-        json.dump(medications_dict, write_file, indent=4)
+        json.dump(m_dict, write_file, indent=4)
     return print(f'{name} {operation} \n {FILE_NAME_JSON} - safe')
 
 
