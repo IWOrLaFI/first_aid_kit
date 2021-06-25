@@ -39,15 +39,13 @@ class Medications:
         medications_dict.update(x)
         return print_to_json(self.name, 'added')
 
-
-def del_medications():
-    try:
-        m_del = input('Enter name medication for delete\n>>>')
-        del medications_dict[m_del]
-        return print_to_json(m_del, 'removed')
-    except KeyError:
-        print('Not find medication\n Choice medication in list\n')
-        create_user_list()
+    def del_medications(self):
+        try:
+            del medications_dict[self]
+            return print_to_json(self, 'removed')
+        except KeyError:
+            print('Not find medication\n Choice medication in list\n')
+            create_user_list()
 
 
 def input_ex_date():
@@ -140,7 +138,8 @@ def command_user():
         elif command == 'add':
             input_medication().add_medications()
         elif command == 'del':
-            del_medications()
+            m_del = input('Enter name medication for delete\n>>>')
+            Medications.del_medications(m_del)
         elif command == 'edit':
             input_medication().add_medications()
         elif command == 'help':

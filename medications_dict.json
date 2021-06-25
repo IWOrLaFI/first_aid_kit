@@ -33,15 +33,5 @@
         "name": "\u0430\u0441\u043f\u0438\u0440\u0438\u043d",
         "expiration_date": "03.02.2023",
         "number_of_medications": 50
-    },
-    "qwerty": {
-        "name": "qwerty",
-        "expiration_date": "03.02.2019",
-        "number_of_medications": 150
-    },
-    "trewq": {
-        "name": "trewq",
-        "expiration_date": "05.12.2002",
-        "number_of_medications": 80
     }
 }
