@@ -47,6 +47,13 @@ class Medications:
             print('Not find medication\n Choice medication in list\n')
             create_user_list()
 
+    def find_medication():
+        try:
+            name = input('Enter name medication\n>>>')
+            return print(medications_dict[name])
+        except KeyError:
+            print('Not find medication\n Choice medication in list\n')
+            create_user_list()
 
 def input_ex_date():
     try:
@@ -68,13 +75,6 @@ def input_medication():
     return m1
 
 
-def find_medication():
-    try:
-        name = input('Enter name medication\n>>>')
-        return print(medications_dict[name])
-    except KeyError:
-        print('Not find medication\n Choice medication in list\n')
-        create_user_list()
 
 
 def print_to_json(name, operation, m_dict=medications_dict):
@@ -138,8 +138,8 @@ def command_user():
         elif command == 'add':
             input_medication().add_medications()
         elif command == 'del':
-            m_del = input('Enter name medication for delete\n>>>')
-            Medications.del_medications(m_del)
+            name = input('Enter name medication for delete\n>>>')
+            Medications.del_medications(name)
         elif command == 'edit':
             input_medication().add_medications()
         elif command == 'help':
