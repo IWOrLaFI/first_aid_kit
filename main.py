@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-FILE_NAME_JSON = 'medications_dict.json'
+FILE_NAME_JSON = 'medications_my_dict.json'
 
 
 def create_new_file_json(file_name):
@@ -39,7 +39,7 @@ class Medications:
         medications_dict.update(x)
         return print_to_json(self.name, 'added')
 
-    def del_medications(self):
+    def del_medications(self: str):
         try:
             del medications_dict[self]
             return print_to_json(self, 'removed')
@@ -47,7 +47,7 @@ class Medications:
             print('Not find medication\n Choice medication in list\n')
             create_user_list()
 
-    def find_medication(self):
+    def find_medication(self: str):
         try:
             return print(medications_dict[self])
         except KeyError:
@@ -71,7 +71,7 @@ def input_medication():
     name = input('Enter name\n>>>')
     date = input_ex_date()
     number = int(input('Enter number of drugs\n>>>'))
-    m1 = Medications(name, date, number)
+    m1 = Medications(name.title(), date, number)
     return m1
 
 
@@ -132,13 +132,13 @@ def command_user():
         elif command == 'exp':
             msg_exp()
         elif command == 'find':
-            name = str(input('Enter name medication\n>>>'))
-            Medications.find_medication(name)
+            find_name = input('Enter name medication\n>>>')
+            Medications.find_medication(find_name.title())
         elif command == 'add':
             input_medication().add_medications()
         elif command == 'del':
-            name = input('Enter name medication for delete\n>>>')
-            Medications.del_medications(name)
+            del_name = input('Enter name medication for delete\n>>>')
+            Medications.del_medications(del_name)
         elif command == 'edit':
             input_medication().add_medications()
         elif command == 'help':
@@ -156,4 +156,5 @@ def start():
     command_user()
 
 
-start()
+if __name__ == '__main__':
+    start()
