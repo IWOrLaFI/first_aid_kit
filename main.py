@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-FILE_NAME_JSON = 'medications_my_dict.json'
+FILE_NAME_JSON = 'medications_dict.json'
 
 
 def create_new_file_json(file_name):
@@ -127,23 +127,23 @@ def msg_command_list():
 def command_user():
     while True:
         command = input('\nEnter the command:\n>>> ')
-        if command == 'list':
+        if command.lower() == 'list':
             create_user_list()
-        elif command == 'exp':
+        elif command.lower() == 'exp':
             msg_exp()
-        elif command == 'find':
+        elif command.lower() == 'find':
             find_name = input('Enter name medication\n>>>')
             Medications.find_medication(find_name.title())
-        elif command == 'add':
+        elif command.lower() == 'add':
             input_medication().add_medications()
-        elif command == 'del':
+        elif command.lower() == 'del':
             del_name = input('Enter name medication for delete\n>>>')
             Medications.del_medications(del_name)
-        elif command == 'edit':
+        elif command.lower() == 'edit':
             input_medication().add_medications()
-        elif command == 'help':
+        elif command.lower() == 'help':
             msg_command_list()
-        elif command == 'exit':
+        elif command.lower() == 'exit':
             break
         else:
             print("Unknown  command")
