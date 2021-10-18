@@ -126,24 +126,24 @@ def msg_command_list():
 
 def command_user():
     while True:
-        command = input('\nEnter the command:\n>>> ')
-        if command.lower() == 'list':
+        user_command = input('\nEnter the command:\n>>> ')
+        if user_command.lower() == 'list':
             create_user_list()
-        elif command.lower() == 'exp':
+        elif user_command.lower() == 'exp':
             msg_exp()
-        elif command.lower() == 'find':
+        elif user_command.lower() == 'find':
             find_name = input('Enter name medication\n>>>')
             Medications.find_medication(find_name.title())
-        elif command.lower() == 'add':
+        elif user_command.lower() == 'add':
             input_medication().add_medications()
-        elif command.lower() == 'del':
+        elif user_command.lower() == 'del':
             del_name = input('Enter name medication for delete\n>>>')
             Medications.del_medications(del_name)
-        elif command.lower() == 'edit':
+        elif user_command.lower() == 'edit':
             input_medication().add_medications()
-        elif command.lower() == 'help':
+        elif user_command.lower() == 'help':
             msg_command_list()
-        elif command.lower() == 'exit':
+        elif user_command.lower() == 'exit':
             break
         else:
             print("Unknown  command")
